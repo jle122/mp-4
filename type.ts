@@ -1,4 +1,6 @@
-export type CatProps = {
-    id : string,
-    url : string,
+export type DogProps = {
+    name : string,
+    bred_for : string,
+    life_span : string,
+    temperament : string
 }

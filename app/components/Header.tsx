@@ -5,7 +5,7 @@ export default function Header() {
 
     return (
         <header>
-            <h2>Cat API Display</h2>
+            <h2>Dog API Display</h2>
             <nav>
                 <Link href="/" className={LinkStyling}>Home</Link>
                 <Link href="display" className={LinkStyling}>Display</Link>   
