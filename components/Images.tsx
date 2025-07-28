@@ -1,8 +1,15 @@
 "use client";
+
 import Dogs from "./Dogs";
 import styled from "styled-components";
-import {useEffect, useState} from "react";
+import {useEffect, useState, Suspense} from "react";
 import {DogProps} from "@/type";
+import Loading from "./Loading"
+
+const AllDiv=styled.div`
+  color:white;
+  background-color: lightgreen;
+`
 
 export default function Images() {
     const [pics, setPics] = useState<DogProps[]>([]);
@@ -20,8 +27,6 @@ export default function Images() {
     }, [pics.length]);
 
     return(
-        <>
-            <Dogs data={pics}/>
-        </>
+        <Dogs data={pics}/>
     )
 }
