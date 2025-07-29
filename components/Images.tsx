@@ -1,9 +1,8 @@
 "use client";
 
 import Dogs from "./Dogs";
-import {useEffect, useState, Suspense} from "react";
+import {useEffect, useState} from "react";
 import {DogProps} from "@/type";
-import Loading from "./Loading"
 import getAPI from "@/lib/getAPI"
 
 export default function Images() {
@@ -24,8 +23,6 @@ export default function Images() {
     }
 
     return(
-        <Suspense fallback={<main><Loading/></main>}>
-            <Dogs data={pics}/>
-        </Suspense>
+        <Dogs data={pics}/>
     )
 }
